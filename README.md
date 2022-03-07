@@ -7,3 +7,4 @@
 
 * Postman collection yapısı Kategoriler için oluşturuldu(Blog.postman_collection.json)
 * Database dump ı dosya halinde paylaşıldı.(Test için => email:mehmet@gmail.com, password:1) (blog.sql)
+* Request isteklerinde Header (Accept : application/json) ayarlanmalıdır.
