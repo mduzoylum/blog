@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "44f73618-9fa6-4a50-b359-9956fc577ece",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mehmet@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories_all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories_show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories_store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Televizyonlar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories_update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Radyolar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Radyolar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2MxOTE3NTkwMmY3OWQ5MDMxMGU4MjAxNGNmZGI4MzBhNWNmYTYwZDM2MTEzODIxMWYwYzIzYmI2NzhkMTg1Y2Y3NzA4ZjkwNmJiODMyMWYiLCJpYXQiOjE2NDY2NDEzNDQuNDAyODQxLCJuYmYiOjE2NDY2NDEzNDQuNDAyODQ0LCJleHAiOjE2NDY2NDQ5NDQuMzkxOTI1LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bvjOFpfQ3obLAfbrOBvhFqtURpGdXkv8cZNK-n9FuhxSDRZ3sb-OCBW1DNs0uWP2X4_bmAL2vZ5zsOo2UEDNfGZgH0Nub9IBE563aX0Y3_Fu3BrC5bm9k9M_pApAlCXN1tcxlh0FY1hjdR_RqOBytGt93dLw5OXpk3BOFMTLoCBViLseJ_XQ8jcWeur9VHyjphEvbO_Eqcf-24bFUH8I1HRfMO_7wSXihchytr-DdIltko2skEX3TqpELm_SYhc9s24NZRLCbWFpynVpvwXHJni55bQxylJD8GDQQL1_3BlMFjurZq_oVswScK0Q8QUYDna9DJUhgmls0Yqb3AyylYvJYpQUnzGNuoJF3KQ3fKE9qLHUgZNcazzcyhmALE2VoLgK_a2cslbWc_YFxd18-QO2E2_KHaGN36uNCBmhCYrwaKG_IK5jiiM5yCLfvQHgB2xWYZLxik9f2b5tlWU6zElvXWb77694Sm33gQkDkfdtYgOLEnH_07u8pug6uiXOoDKqo4CEKDI2zAXG7qOSwTuLw8XR4AHv0dCOYuqSnqtXbmk_Z2qqBDJ6hDbuSbN83eeeNxfynMvSC-D5VLJf_DsG0ImtNKwtV1r72H-YS0yCbar8KEP0zAoJats8Gmj4yUD8Lbi_QQ5pdMjPwCp9xuOM4P3yA9qxhwGS_kplu9w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
