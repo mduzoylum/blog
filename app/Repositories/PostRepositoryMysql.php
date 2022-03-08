@@ -35,7 +35,7 @@ class PostRepositoryMysql implements \App\Repositories\PostRepositoryInterface
             return $this->errorResponse(404, [], $validation->errors()->first());
         }
 
-        Category::create($request->all());
+        Category::create($request->only('name'));
         return $this->successResponse(200, [], 'Category created successfully');
     }
 
@@ -105,7 +105,7 @@ class PostRepositoryMysql implements \App\Repositories\PostRepositoryInterface
 
     public function showArticle($id)
     {
-        $article = Article::find($id);
+        $article = Article::with('tags')->find($id);
         if (!$article) {
             return $this->errorResponse(404, [], 'Article not found');
         }
